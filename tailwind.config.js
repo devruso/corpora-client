@@ -1,23 +1,66 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'], 
+    darkMode: ['class'],
+    content: ['./src/**/*.{js,ts,jsx,tsx}', './index.html'], 
   theme: {
-    extend: {
-      colors: {
-        primary1: '#2D5C8A',
-        primary2: '#78A9FF',
-        secondary: '#F9A825',
-        background: '#F5F5F5',
-        text: '#212121',
-        muted: '#757575',
-        danger: '#D32F2F',
-      },
-      fontFamily: {
-        title: ['Montserrat', 'sans-serif'],
-        body: ['Open Sans', 'sans-serif'],
-      },
-    },
+  	extend: {
+  		colors: {
+  			primary1: '#2D5C8A',
+  			primary2: '#78A9FF',
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			background: 'hsl(var(--background))',
+  			text: '#212121',
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			danger: '#D32F2F',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+  		fontFamily: {
+  			title: ['Montserrat', 'sans-serif'],
+  			body: ['Open Sans', 'sans-serif']
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 
