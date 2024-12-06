@@ -49,7 +49,7 @@ src/
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/devruso/corpora-frontend.git
+   git clone https://github.com/devruso/corpora-client.git
    cd corpora-frontend
    ```
 
